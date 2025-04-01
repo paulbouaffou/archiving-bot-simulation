@@ -1,7 +1,7 @@
 # ArchivingBot - simulation
 
 ## Description
-La simulation du robot (ArchivingBot)[https://github.com/paulbouaffou/archiving-bot] permet de tester son fonctionnement avant son déploiement effectif sur Wikidata. Elle vise à vérifier la précision du processus d’archivage des URL et à s’assurer que le bot respecte les règles définies.
+La simulation du robot [ArchivingBot](https://github.com/paulbouaffou/archiving-bot) permet de tester son fonctionnement avant son déploiement effectif sur Wikidata. Elle vise à vérifier la précision du processus d’archivage des URL et à s’assurer que le bot respecte les règles définies.
 
 ## Installation
 1. Clonez le dépôt
