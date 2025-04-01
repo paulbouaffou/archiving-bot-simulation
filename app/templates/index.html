@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchivingBot - simulation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ArchivingBot - simulation</h1>
+        <hr>
+        <h2>Déclaration sur Wikidata</h2>
+        <p>(Ajouter une valeur à la propriété population et une URL de référence)</p>
+        <form method="POST">
+            <label for="value">Population (Abidjan) :</label>
+            <input type="text" name="value" required><br><br>
+            
+            <label for="ref_url">URL de référence :</label>
+            <input type="url" name="ref_url" required><br><br>
+            
+            <button type="submit">Soumettre</button>
+        </form>
+        
+        <h2>Résultats</h2>
+        <ul>
+            {% for entry in data_store %}
+                <li>
+                    <strong>Population (Abidjan) :</strong> {{ entry.value }}<br>
+                    <strong>URL de référence :</strong> <a href="{{ entry.reference.original }}" target="_blank">{{ entry.reference.original }}</a><br>
+                    <strong>URL archivée :</strong> <a href="{{ entry.reference.archived }}" target="_blank">{{ entry.reference.archived }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
